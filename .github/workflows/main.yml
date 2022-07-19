@@ -11,6 +11,6 @@ jobs:
         COMMAND: "python setup.py install"
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
-        dont_break_build: "true"
+        args: dont_break_build: "true"
         args: --file=setup.py
         command: monitor --org="aaron.pynos"
