@@ -13,3 +13,4 @@ jobs:
       with:
         args: --file=setup.py
         command: snyk code test
+        command: monitor --org=aaron.pynos
