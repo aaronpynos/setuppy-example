@@ -12,5 +12,5 @@ jobs:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
         args: --file=setup.py
-        command: snyk code test
+        command: snyk test
         command: monitor --org=aaron.pynos
