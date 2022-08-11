@@ -1,4 +1,4 @@
-name: Snyk Security Scan
+name: Example workflow for Python using Snyk 
 on: pull_request
 jobs:
   security:
@@ -9,7 +9,6 @@ jobs:
       uses: snyk/actions/python@master
       env:
         COMMAND: "python setup.py install"
-        SNYK_TOKEN: "21417a2b-8896-4c2e-8c0c-8b3e6ac3b0f6"
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
         args: --file=setup.py
-        command: snyk test --json
