@@ -11,4 +11,4 @@ jobs:
         COMMAND: "python setup.py install"
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
-        args: snyk fix --file=setup.py
+        args: snyk fix --skip-unresolved --file=setup.py
